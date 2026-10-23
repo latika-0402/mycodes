@@ -60,14 +60,14 @@ YES
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T13:02:33.373Z  
+**Submitted:** 2026-10-23T13:03:15.167Z  
 
 ```py
 # cook your dish here
 t=int(input())
 for _ in range(t):
     N,X=map(int,input().split())
-    if N<=X:print("yes")
+    if N<=X and X%N==0:print("yes")
     else:print("no")
 ```
 
