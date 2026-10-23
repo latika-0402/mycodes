@@ -58,15 +58,15 @@ Qualify
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T12:38:06.385Z  
+**Submitted:** 2026-10-23T12:38:20.458Z  
 
 ```py
 # cook your dish here
 t=int(input())
 for _ in range(t):
     Q,E,H=map(int,input().split())
-    if Q<=(E+(H*2)):print("QUALIFY")
-    else:print("")
+    if Q<=(E+(H*2)):print("Qualify")
+    else:print("NotQualify")
 ```
 
 ---
