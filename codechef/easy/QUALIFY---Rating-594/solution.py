@@ -1,6 +1,6 @@
 # cook your dish here
 t=int(input())
 for _ in range(t):
-    n=int(input())
-    if n%4==0:print("GOOD")
-    else:print("NOT GOOD")
+    Q,E,H=map(int,input().split())
+    if Q<=(E+(H*2)):print("QUALIFY")
+    else:print("")
