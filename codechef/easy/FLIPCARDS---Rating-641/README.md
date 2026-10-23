@@ -61,7 +61,7 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T15:31:02.367Z  
+**Submitted:** 2026-10-23T15:31:31.081Z  
 
 ```py
 # cook your dish here
@@ -70,7 +70,7 @@ for _ in range(t):
     c,f=map(int,input().split())
     if f==0 or c==f:
         print(0)
-    else:print(f)
+    else:print(min(f,c-f))
 ```
 
 ---
