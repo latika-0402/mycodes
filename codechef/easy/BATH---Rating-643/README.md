@@ -54,7 +54,7 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T15:34:40.129Z  
+**Submitted:** 2026-10-23T15:34:57.373Z  
 
 ```py
 # cook your dish here
@@ -62,7 +62,7 @@ t=int(input())
 for _ in range(t):
     x,y=map(int,input().split())
     required=2*y
-    if 2*y<x:
+    if 2*y<=x:
         print(x//(required))
     else:print(0)
 ```
