@@ -57,7 +57,7 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-23T15:39:39.477Z  
+**Submitted:** 2026-10-23T15:40:29.584Z  
 
 ```py
 # cook your dish here
@@ -65,7 +65,7 @@ t=int(input())
 for _ in range(t):
     n,m=map(int,input().split())
     if n>m:print(abs(n-m)+n)
-    else:print(abs(n-m))
+    else:print(n)
 ```
 
 ---
