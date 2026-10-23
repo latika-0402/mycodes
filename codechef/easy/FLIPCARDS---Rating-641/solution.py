@@ -4,4 +4,4 @@ for _ in range(t):
     c,f=map(int,input().split())
     if f==0 or c==f:
         print(0)
-    else:print(f)
+    else:print(min(f,c-f))
