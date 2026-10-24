@@ -46,9 +46,9 @@ The loose-bound subarrays are `[1]`, `[1]`, and `[1, 1]`. The minimum value in t
 ## Solution
 
 **Language:** Python  
-**Runtime:** 168 ms (beats 100.00%)  
-**Memory:** 31.6 MB  
-**Submitted:** 2026-10-24T14:53:49.640Z  
+**Runtime:** 174 ms (beats 100.00%)  
+**Memory:** 31.7 MB  
+**Submitted:** 2026-10-24T14:55:52.463Z  
 
 ```py
 class Solution:
@@ -56,12 +56,12 @@ class Solution:
         result=0
         i=0
         while i<len(nums):
-            if nums[i] < minK or nums[i] > maxK:
-                i += 1
+            if nums[i]<minK or nums[i]>maxK:
+                i+=1
                 continue
-            start = i
-            while i < len(nums) and minK <= nums[i] <= maxK:
-                i += 1
+            start=i
+            while i<len(nums) and minK<=nums[i]<= maxK:
+                i+=1
             l=i-start
             result+=l*(l+1)//2
         return result
