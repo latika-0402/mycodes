@@ -56,14 +56,14 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T12:07:59.484Z  
+**Submitted:** 2026-10-24T12:09:00.127Z  
 
 ```py
 # cook your dish here
 t=int(input())
 for _ in range(t):
     x,y=map(int,input().split())
-    if x>y:print(x//y)
+    if x>=y:print(x//y)
     else:print(0)
 ```
 
