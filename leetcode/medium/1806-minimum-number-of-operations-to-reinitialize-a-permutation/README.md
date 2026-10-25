@@ -58,29 +58,22 @@ Output: 4
 ## Solution
 
 **Language:** Python  
-**Runtime:** 272 ms (beats 17.70%)  
-**Memory:** 19.4 MB (beats 21.24%)  
-**Submitted:** 2026-10-25T08:37:15.592Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.3 MB (beats 57.52%)  
+**Submitted:** 2026-10-25T08:38:29.524Z  
 
 ```py
 class Solution:
     def reinitializePermutation(self, n: int) -> int:
-        perm = [i for i in range(n)]
-        initial = list(perm)
-        arr = [0] * n
-        operations = 0
+        res, i = 0, 1
+        while res == 0 or i > 1:
+            if i < n / 2:
+                i *= 2
+            else:
+                i = (i - n / 2) * 2 + 1
+            res += 1
+        return res
         
-        while True:
-            for i in range(n):
-                if i % 2 == 0:
-                    arr[i] = perm[i // 2]
-                else:
-                    arr[i] = perm[n // 2 + (i - 1) // 2]
-            
-            perm = list(arr)
-            operations += 1
-            if perm == initial:
-                return operations
 ```
 
 ---
