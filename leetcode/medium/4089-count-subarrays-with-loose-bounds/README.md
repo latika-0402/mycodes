@@ -46,22 +46,20 @@ The loose-bound subarrays are `[1]`, `[1]`, and `[1, 1]`. The minimum value in t
 ## Solution
 
 **Language:** Python  
-**Runtime:** 161 ms (beats 100.00%)  
-**Memory:** 31.7 MB  
-**Submitted:** 2026-10-25T05:17:06.705Z  
+**Runtime:** 166 ms (beats 100.00%)  
+**Memory:** 31.3 MB (beats 100.00%)  
+**Submitted:** 2026-10-25T05:17:56.972Z  
 
 ```py
 class Solution:
     def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
         last = -1
         ans = 0
-        
         for i, num in enumerate(nums):
             if minK <= num <= maxK:
                 ans += i - last
             else:
                 last = i
-                
         return ans
         
         
