@@ -11,10 +11,19 @@ for _ in range(t):
         continue
         
     target = total_sum // 2
-    dp = 1  
+    dp = [False] * (target + 1)
+    dp[0] = True
+    
+    possible = False
     for num in a:
-        dp |= (dp << num)
-    if (dp >> target) & 1:
+        for j in range(target, num - 1, -1):
+            if dp[j - num]:
+                dp[j] = True
+        if dp[target]:
+            possible = True
+            break
+            
+    if possible:
         print("YES")
     else:
         print("NO")
