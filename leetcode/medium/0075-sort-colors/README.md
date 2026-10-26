@@ -47,9 +47,9 @@ The array has one each of 0, 1, and 2, arranged in-place in the order 0, 1, 2.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 19.1 MB  
-**Submitted:** 2026-10-25T16:09:33.512Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 19.1 MB (beats 97.09%)  
+**Submitted:** 2026-10-26T06:11:53.859Z  
 
 ```py
 class Solution:
@@ -57,8 +57,20 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        return nums.sort()
+        low = 0
+        mid = 0
+        high = len(nums) - 1
         
+        while mid <= high:
+            if nums[mid] == 0:
+                nums[low], nums[mid] = nums[mid], nums[low]
+                low += 1
+                mid += 1
+            elif nums[mid] == 1:
+                mid += 1
+            else:  # nums[mid] == 2
+                nums[mid], nums[high] = nums[high], nums[mid]
+                high -= 1
 ```
 
 ---
