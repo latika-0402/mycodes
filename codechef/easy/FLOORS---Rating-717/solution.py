@@ -1,0 +1,7 @@
+# cook your dish here
+t = int(input())
+for _ in range(t):
+    x, y = map(int, input().split())
+    floor_x = (x - 1) // 10 + 1
+    floor_y = (y - 1) // 10 + 1
+    print(abs(floor_x - floor_y))
