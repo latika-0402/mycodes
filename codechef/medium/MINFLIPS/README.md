@@ -64,11 +64,18 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T14:12:08.489Z  
+**Submitted:** 2026-10-26T14:16:40.314Z  
 
 ```py
 # cook your dish here
-
+t=int(input())
+for _ in range(t):
+    n=int(input())
+    l=list(map(int,input().split()))
+    if len(l)%2!=0:
+        print(-1)
+    else:
+        print(abs(l.count(1)-l.count(-1))//2)
 ```
 
 ---
