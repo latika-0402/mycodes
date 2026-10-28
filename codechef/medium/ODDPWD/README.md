@@ -78,12 +78,11 @@ The password is `WEC`.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T15:02:03.276Z  
+**Submitted:** 2026-10-28T15:02:32.327Z  
 
 ```py
 # cook your dish here
 n=input()
-n=n.split()
 result=[]
 for i in range(len(n)):
     if i%2==0:
