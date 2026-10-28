@@ -2,6 +2,6 @@
 t=int(input())
 for _ in range(t):
     a,b,c=map(int,input().split())
-    sumval=a+max(b,c)
+    sumval = (a + b + c) - min(a, b, c)
     print(sumval)
     
