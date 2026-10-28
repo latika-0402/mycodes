@@ -67,7 +67,7 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T15:53:08.426Z  
+**Submitted:** 2026-10-28T15:54:43.000Z  
 
 ```py
 # cook your dish here
@@ -77,10 +77,8 @@ for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     ans = 0
-
     for i in range(n - 2):
         ans += abs(a[i])
-
     ans = ans - a[n - 2] + a[n - 1]
 
     print(ans)
