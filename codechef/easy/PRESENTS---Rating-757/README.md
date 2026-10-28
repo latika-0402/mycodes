@@ -49,14 +49,14 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T09:41:29.786Z  
+**Submitted:** 2026-10-28T09:42:49.648Z  
 
 ```py
 # cook your dish here
 t=int(input())
 for _ in range(t):
     x=int(input())
-    print(4 *(x//4))
+    print((4 *(x//5)) + (x%5))
 ```
 
 ---
