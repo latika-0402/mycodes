@@ -56,14 +56,14 @@ Output
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T12:42:43.390Z  
+**Submitted:** 2026-10-28T12:43:22.439Z  
 
 ```py
 # cook your dish here
 t=int(input())
 for _ in range(t):
     a,b,c=map(int,input().split())
-    sumval=a+max(b,c)
+    sumval = (a + b + c) - min(a, b, c)
     print(sumval)
     
 ```
