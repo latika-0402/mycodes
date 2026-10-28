@@ -1,7 +1,10 @@
 # cook your dish here
 t=int(input())
 for _ in range(t):
-    a,b=map(int,input().split())
-    if a>b:print(">")
-    elif a<b:print("<")
-    else:print("=")
+    n,k=map(int,input().split())
+    l=list(map(int,input().split()))
+    count=0
+    result=[i+k for i in l]
+    for i in result:
+        if i%7==0:count+=1
+    print(count)
