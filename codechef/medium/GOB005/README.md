@@ -4,16 +4,18 @@
 
 ## Problem
 
-_Description not available._
+### Multiple Choice Question
+
+Which line of code will output the string "Hi"?
 
 ## Solution
 
-**Language:** Go  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T13:56:49.529Z  
+**Submitted:** 2026-10-28T13:56:56.882Z  
 
-```go
+```cpp
 package main
 import "fmt"
 
