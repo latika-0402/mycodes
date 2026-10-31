@@ -35,7 +35,7 @@ Explanation: The array has only single element, hence the reversed array is same
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-31T13:25:08.837Z  
+**Submitted:** 2026-10-31T13:26:05.018Z  
 
 ```py
 class Solution:
