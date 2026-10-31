@@ -58,7 +58,7 @@ Since $1 \lt K$, the process stops here and the smallest value is $1$.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-31T04:39:58.740Z  
+**Submitted:** 2026-10-31T04:40:37.714Z  
 
 ```py
 # cook your dish here
