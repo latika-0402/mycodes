@@ -1,0 +1,82 @@
+# WEIGHTBL - Rating 1045
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+### Weight Balance
+
+No play and eating all day makes your belly fat. This happened to Chef during the lockdown. His weight before the lockdown was $w_1$ kg (measured on the most accurate hospital machine) and after $M$ months of lockdown, when he measured his weight at home (on a regular scale, which can be inaccurate), he got the result that his weight was $w_2$ kg ($w_2 \gt w_1$).
+
+Scientific research in all growing kids shows that their weights increase by a value between $x_1$ and $x_2$ kg (inclusive) per month, but not necessarily the same value each month. Chef assumes that he is a growing kid. Tell him whether his home scale could be giving correct results.
+
+### Input
+- The first line of the input contains a single integer $T$ denoting the number of test cases. The description of $T$ test cases follows.
+- The first and only line of each test case contains five space-separated integers $w_1$, $w_2$, $x_1$, $x_2$ and $M$.
+### Output
+
+For each test case, print a single line containing the integer $1$ if the result shown by the scale can be correct or $0$ if it cannot.
+
+### Constraints
+- $1 \leq T \leq 10^5$
+- $1 \leq w_1 \lt w_2 \leq 100$
+- $0 \leq x_1 \leq x_2 \leq 10$
+- $1 \leq M \leq 10$
+### Sample 1:
+Input
+Output
+
+```
+5
+1 2 1 2 2
+2 4 1 2 2
+4 8 1 2 2
+5 8 1 2 2
+1 100 1 2 2
+```
+
+```
+0
+1
+1
+1
+0
+```
+
+### Explanation:
+
+ **Example case 1:**  Since the increase in Chef's weight is $2 - 1 = 1$ kg and that is less than the minimum possible increase $1 \cdot 2 = 2$ kg, the scale must be faulty.
+
+ **Example case 2:**  Since the increase in Chef's weight is $4 - 2 = 2$ kg, which is equal to the minimum possible increase $1 \cdot 2 = 2$ kg, the scale is showing correct results.
+
+ **Example case 3:**  Since the increase in Chef's weight is $8 - 4 = 4$ kg, which is equal to the maximum possible increase $2 \cdot 2 = 4$ kg, the scale is showing correct results.
+
+ **Example case 4:**  Since the increase in Chef's weight $8 - 5 = 3$ kg lies in the interval $[1 \cdot 2, 2 \cdot 2]$ kg, the scale is showing correct results.
+
+ **Example case 5:**  Since the increase in Chef's weight is $100 - 1 = 99$ kg and that is more than the maximum possible increase $2 \cdot 2 = 4$ kg, the weight balance must be faulty.
+
+## Solution
+
+**Language:** Python  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-11-01T15:28:02.578Z  
+
+```py
+# cook your dish here
+t=int(input())
+for _ in range(t):
+    w1,w2,x1,x2,m=map(int,input().split())
+    actual_gain = w2 - w1
+    min_gain = x1 * m
+    max_gain = x2 * m
+    
+    if min_gain <= actual_gain <= max_gain:
+        print(1)
+    else:
+        print(0)
+```
+
+---
+
+[View on CodeChef](https://www.codechef.com/problems/WEIGHTBL)
