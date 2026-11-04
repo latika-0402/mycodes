@@ -52,27 +52,37 @@ Explanation: The only possible triplet sums up to 0.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 666 ms (beats 34.87%)  
-**Memory:** 22.3 MB (beats 33.18%)  
-**Submitted:** 2026-11-04T07:41:01.150Z  
+**Runtime:** 611 ms (beats 66.52%)  
+**Memory:** 22.2 MB (beats 54.26%)  
+**Submitted:** 2026-11-04T07:45:00.222Z  
 
 ```py
 class Solution:
-    def threeSum(self, nums: list[int]) -> list[list[int]]:
-        nums.sort()
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
-        for i in range(len(nums) - 2):
-            if i and nums[i] == nums[i - 1]: continue
-            l, r = i + 1, len(nums) - 1
-            while l < r:
-                s = nums[i] + nums[l] + nums[r]
-                if s < 0: l += 1
-                elif s > 0: r -= 1
+        nums.sort()
+
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            
+            j = i + 1
+            k = len(nums) - 1
+
+            while j < k:
+                total = nums[i] + nums[j] + nums[k]
+
+                if total > 0:
+                    k -= 1
+                elif total < 0:
+                    j += 1
                 else:
-                    res.append([nums[i], nums[l], nums[r]])
-                    l += 1; r -= 1
-                    while l < r and nums[l] == nums[l - 1]: l += 1
-                    while l < r and nums[r] == nums[r + 1]: r -= 1
+                    res.append([nums[i], nums[j], nums[k]])
+                    j += 1
+
+                    while nums[j] == nums[j-1] and j < k:
+                        j += 1
+        
         return res
 ```
 
